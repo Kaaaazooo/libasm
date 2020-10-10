@@ -1,7 +1,6 @@
-section .txt:
-	global ft_strcmp
+global _ft_strcmp
 
-ft_strcmp:
+_ft_strcmp:
 	strcmp_loop:
 		xor rax, rax
 		mov al, byte [rdi]

@@ -1,14 +1,13 @@
-section .txt:
-	global ft_strcpy
+global _ft_strcpy
 
-ft_strcpy:
+_ft_strcpy:
 	xor rax, rax
-	xor rdx, rdx
+	xor rcx, rcx
 	strcpy_loop:
-		mov al, byte [rsi + rdx]
-		mov byte [rdi + rdx], al
-		inc rdx
-		cmp byte [rsi + rdx - 1], 0
+		mov dl, byte [rsi + rcx]
+		mov byte [rdi + rcx], dl
+		inc rcx
+		cmp byte [rsi + rcx - 1], 0
 		jne strcpy_loop
 		mov rax, rdi
 		ret

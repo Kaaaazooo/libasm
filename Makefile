@@ -3,11 +3,10 @@ NAME = libfts.a
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
 
-SRCS = $(addprefix srcs/, ft_strlen.s ft_strcpy.s ft_strcmp.s \
-	ft_write.s ft_read.s)
+SRCS = $(addprefix srcs/, ft_strlen.s ft_strcpy.s ft_strcmp.s)
 
 %.o : %.s
-	nasm -f elf64 $< -o $@
+	nasm -f macho64 $< -o $@
 
 OBJS = $(SRCS:.s=.o)
 

@@ -1,10 +1,15 @@
-global ft_read
+extern ___error
 
-ft_read:
-	mov rax, 0
+global _ft_read
+
+_ft_read:
+	mov rax, 0x2000003
 	syscall
-	jc ret_err
+	jc get_errno
 	ret
-ret_err:
+get_errno:
+	push rax
+	call ___error
+	pop qword[rax]
 	mov rax, -1
 	ret

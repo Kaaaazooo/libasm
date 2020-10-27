@@ -17,5 +17,6 @@ _ft_strdup:
 	call _ft_strcpy
 	ret
 alloc_failed:
+	pop rdi
 	mov rax, 0
 	ret

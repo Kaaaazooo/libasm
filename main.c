@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 11:30:30 by sabrugie          #+#    #+#             */
-/*   Updated: 2020/10/10 15:45:20 by sabrugie         ###   ########.fr       */
+/*   Updated: 2020/10/27 13:52:06 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,7 +204,7 @@ void	test_write(void)
 	printf("\n\n");
 }
 
-void	test_read(void)
+void	test_read(char *str)
 {
 	int		fd;
 	int		fd1;
@@ -212,8 +212,8 @@ void	test_read(void)
 	char	buf[128];
 
 	printf("\n---------- READ / FT_READ ----------\n\n");
-	fd = open("jojo_le_labrador", O_RDONLY);
-	fd1 = open("jojo_le_labrador", O_RDONLY);
+	fd = open(str, O_RDONLY);
+	fd1 = open(str, O_RDONLY);
 	printf("(%d)\n", ret = read(fd, buf, 17));
 	printf("[%s]\n\n", ret < 0 ? strerror(errno) : buf);
 	errno = 0;
@@ -253,11 +253,16 @@ void	test_read(void)
 
 int	main(int ac, char **av)
 {
+	if (ac != 2)
+	{
+		printf(ac < 2 ? "No argument\n" : "Too many arguments\n");
+		return (1);
+	}
 	test_strlen();
 	test_strcpy();
 	test_strcmp();
 	test_strdup();
 	test_write();
-	test_read();
+	test_read(av[1]);
 	return (0);
 }

@@ -6,12 +6,12 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 14:00:02 by sabrugie          #+#    #+#             */
-/*   Updated: 2020/10/27 14:00:03 by sabrugie         ###   ########.fr       */
+/*   Updated: 2020/10/27 14:04:41 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTS_H
-# define LIBFTS_H
+#ifndef LIBASM_H
+# define LIBASM_H
 
 size_t	ft_strlen(const char *str);
 char	*ft_strcpy(char *dest, const char *src);

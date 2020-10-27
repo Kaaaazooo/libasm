@@ -6,7 +6,7 @@
 #    By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 13:52:43 by sabrugie          #+#    #+#              #
-#    Updated: 2020/10/27 13:52:43 by sabrugie         ###   ########.fr        #
+#    Updated: 2020/10/27 13:57:34 by sabrugie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 main: all
-	$(CC) main.c libfts.a
+	$(CC) main.c $(NAME)
 clean:
 	rm -rf $(OBJS)
 

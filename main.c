@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 11:30:30 by sabrugie          #+#    #+#             */
-/*   Updated: 2020/10/27 13:52:06 by sabrugie         ###   ########.fr       */
+/*   Updated: 2020/10/27 13:57:00 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string.h>
 #include <fcntl.h>
 #include <errno.h>
-#include "libfts.h"
+#include "libasm.h"
 
 void	test_strlen(void)
 {

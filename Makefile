@@ -1,4 +1,4 @@
-NAME = libfts.a
+NAME = libasm.a
 
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
